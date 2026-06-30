@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    min-height: 320px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formulario > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.enviar {
+    display: flex;
+    color: blue;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostrar > p {
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
