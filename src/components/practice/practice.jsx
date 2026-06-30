@@ -1,4 +1,4 @@
-import './practice.css';
+import styles from './practice.module.css';
 import { useState } from 'react';
 
 function Practice() {
@@ -30,10 +30,10 @@ function Practice() {
     };
 
     return (
-        <div>
-            <h1>Practical Experience</h1>
+        <div className={styles.contenedor}>
+            <h1 className={styles.titulo}>Practical Experience</h1>
             {!mostrarInfo ? (
-                <form onSubmit={enviado}>
+                <form onSubmit={enviado} className={styles.formulario}>
                     <div>
                         <label htmlFor="company">Company Name: </label>
                         <input
@@ -90,30 +90,36 @@ function Practice() {
                     <button type="submit">Submit</button>
                 </form>
             ) : (
-                <div>
-                    <h2>Practice</h2>
+                <div className={styles.mostrar}>
                     <p>
                         <strong>Company Name:</strong>
+                        <br />
                         {datos.company}
                     </p>
                     <p>
                         <strong>Posicion Title:</strong>
+                        <br />
                         {datos.posicion}
                     </p>
                     <p>
                         <strong>Main Responsabilities:</strong>
+                        <br />
                         {datos.responsabilities}
                     </p>
                     <p>
                         <strong>Start Employment:</strong>
+                        <br />
                         {datos.start}
                     </p>
                     <p>
                         <strong>Finish Employment: </strong>
+                        <br />
                         {datos.finish}
                     </p>
 
-                    <button onClick={handleEditar}>Editar</button>
+                    <button onClick={handleEditar} className={styles.editar}>
+                        Editar
+                    </button>
                 </div>
             )}
         </div>
