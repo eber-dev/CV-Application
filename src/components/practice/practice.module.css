@@ -9,13 +9,15 @@ body {
 
 .contenedor {
     border: 1px solid black;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     margin-inline: 0;
     width: 100%;
-    max-width: 800px;
+    max-width: 550px;
     height: auto;
-    min-height: 450px;
+    min-height: 480px;
+    background-color: #e9ecef;
 }
 
 .titulo {
@@ -34,11 +36,32 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    width: 100%;
+}
+
+.formulario > div > input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+.formulario > div > label {
+    font-size: 1.2rem;
 }
 
 .enviar {
-    display: flex;
-    color: blue;
+    font-size: 1rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.enviar:hover {
+    cursor: pointer;
+    background: rgba(196, 194, 194, 0.2);
 }
 
 .mostrar {
@@ -49,6 +72,22 @@ body {
 
 .mostrar > p {
     text-align: center;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.editar {
+    font-size: 1rem;
+    padding-inline: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.editar:hover {
+    cursor: pointer;
+    background: rgba(196, 194, 194, 0.2);
 }
