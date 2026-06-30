@@ -1,4 +1,4 @@
-import './seccion1.css';
+import styles from './seccion1.module.css';
 import { useState } from 'react';
 
 function General() {
@@ -29,10 +29,10 @@ function General() {
     };
 
     return (
-        <div className="contenedor">
-            <h1 className="titulo">Personal Information</h1>
+        <div className={styles.contenedor}>
+            <h1 className={styles.titulo}>Personal Information</h1>
             {!mostrarInfo ? (
-                <form onSubmit={enviado} className="formulario">
+                <form onSubmit={enviado} className={styles.formulario}>
                     <div>
                         <label htmlFor="first_name">Fisrt Name:</label>
                         <input
@@ -78,7 +78,7 @@ function General() {
                     </button>
                 </form>
             ) : (
-                <div className="mostrar">
+                <div className={styles.mostrar}>
                     <p>
                         <strong>First Name:</strong>
                         <br />
@@ -100,7 +100,7 @@ function General() {
                         {datos.email}
                     </p>
 
-                    <button onClick={handleEditar} className="editar">
+                    <button onClick={handleEditar} className={styles.editar}>
                         Editar
                     </button>
                 </div>

@@ -1,4 +1,4 @@
-import './experience.css';
+import styles from './experience.module.css';
 import { useState } from 'react';
 
 function Experience() {
@@ -29,10 +29,10 @@ function Experience() {
     };
 
     return (
-        <div>
-            <h1>Educational Experience</h1>
+        <div className={styles.contenedor}>
+            <h1 className={styles.titulo}>Educational Experience</h1>
             {!mostrarInfo ? (
-                <form onSubmit={enviado}>
+                <form onSubmit={enviado} className={styles.formulario}>
                     <div>
                         <label htmlFor="institucion_name">
                             Intitucion Name:{' '}
@@ -68,22 +68,26 @@ function Experience() {
                     <button type="submit">Submit</button>
                 </form>
             ) : (
-                <div>
-                    <h2>Educational Experience</h2>
+                <div className={styles.mostrar}>
                     <p>
                         <strong>Intitucion Name:</strong>
+                        <br />
                         {datos.institucion}
                     </p>
                     <p>
                         <strong>Degree:</strong>
+                        <br />
                         {datos.degree}
                     </p>
                     <p>
                         <strong>Graduation Date:</strong>
+                        <br />
                         {datos.graduation_date}
                     </p>
 
-                    <button onClick={handleEditar}>Editar</button>
+                    <button onClick={handleEditar} className={styles.editar}>
+                        Editar
+                    </button>
                 </div>
             )}
         </div>
