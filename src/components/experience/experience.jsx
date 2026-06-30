@@ -65,7 +65,9 @@ function Experience() {
                             onChange={cambio}
                         />
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className={styles.enviar}>
+                        Submit
+                    </button>
                 </form>
             ) : (
                 <div className={styles.mostrar}>

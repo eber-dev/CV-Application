@@ -73,7 +73,7 @@ function General() {
                             onChange={handleChange}
                         />
                     </div>
-                    <button type="submit" className="enviar">
+                    <button type="submit" className={styles.enviar}>
                         Submit
                     </button>
                 </form>
