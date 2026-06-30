@@ -29,10 +29,10 @@ function General() {
     };
 
     return (
-        <div>
-            <h1>Personal Information</h1>
+        <div className="contenedor">
+            <h1 className="titulo">Personal Information</h1>
             {!mostrarInfo ? (
-                <form onSubmit={enviado}>
+                <form onSubmit={enviado} className="formulario">
                     <div>
                         <label htmlFor="first_name">Fisrt Name:</label>
                         <input
@@ -73,25 +73,36 @@ function General() {
                             onChange={handleChange}
                         />
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="enviar">
+                        Submit
+                    </button>
                 </form>
             ) : (
-                <div>
-                    <h2>Submitted Data</h2>
+                <div className="mostrar">
                     <p>
-                        <strong>First Name:</strong> {datos.name}
+                        <strong>First Name:</strong>
+                        <br />
+                        {datos.name}
                     </p>
                     <p>
-                        <strong>Second Name:</strong> {datos.lastname}
+                        <strong>Second Name:</strong>
+                        <br />
+                        {datos.lastname}
                     </p>
                     <p>
-                        <strong>Phone:</strong> {datos.phone}
+                        <strong>Phone:</strong>
+                        <br />
+                        {datos.phone}
                     </p>
                     <p>
-                        <strong>Email:</strong> {datos.email}
+                        <strong>Email:</strong>
+                        <br />
+                        {datos.email}
                     </p>
 
-                    <button onClick={handleEditar}>Editar</button>
+                    <button onClick={handleEditar} className="editar">
+                        Editar
+                    </button>
                 </div>
             )}
         </div>
